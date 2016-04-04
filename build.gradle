@@ -1,0 +1,39 @@
+// see http://www.gradle.org/docs/current/userguide/tutorial_java_projects.html
+apply plugin: 'java'
+
+// enables generation of eclipse project configurations via `gradlew eclipse`
+apply from: 'eclipse.gradle'
+
+group = 'embedded-adl'
+
+version = "0.1.0dev"
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+compileJava {
+	// files are all encoded using UTF-8
+	options.encoding = 'UTF-8'
+}
+
+compileTestJava {
+	// files are all encoded using UTF-8
+	options.encoding = 'UTF-8'
+}
+
+javadoc {
+	options {
+		// files are all encoded using UTF-8
+		encoding = 'UTF-8'
+		version = true
+		author = true
+	}
+}
+
+repositories {
+	jcenter()
+}
