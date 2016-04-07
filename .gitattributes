@@ -1,4 +1,7 @@
 gradlew eol=lf
 *.sh eol=lf
 
+*.pdf=binary
+*.ppt*=binary
+
 CHANGELOG.md merge=union
