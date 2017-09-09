@@ -15,7 +15,6 @@ import java.lang.annotation.*;
     ElementType.TYPE,
     ElementType.TYPE_PARAMETER,
     ElementType.TYPE_USE})
-@Inherited
 @Documented
 public @interface DecisionMade {
 
