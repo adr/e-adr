@@ -41,21 +41,39 @@ public @interface MADR {
      */
     int value();
 
+    /**
+     * Short title of solved problem and solution
+     */
     String title();
 
+    /**
+     * The user story belonging to this ADR. Typically a reference to the ticket in the issue tracker
+     */
     String userStory() default "";
 
+    /**
+     * context and problem statement
+     */
     String contextAndProblem();
 
     /**
-     * May be omitted if {@link Alternative} annotations are used
+     * Considered alternatives. May be omitted if {@link Alternative} annotations are used.
      */
     String[] alternatives() default {};
 
+    /**
+     * The chosen alternative
+     */
     String chosenAlternative();
 
+    /**
+     * Justification. e.g., only alternative, which meets k.o. criterion decision driver | which resolves force force | ... | comes out best (see below)
+     */
     String justification();
 
+    /**
+     * Consequences. e.g., negative impact on quality attribute, follow-up decisions required, ...
+     */
     String[] consequences() default {};
 
     /**
