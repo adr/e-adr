@@ -59,7 +59,10 @@ public @interface ArchitecturallySignificant {
 
     QualityAttribute[] nfrs() default QualityAttribute.MISC;
 
+    ArchitecuralPrinciple[] principles() default {};
+
+    ArchitecuralStyle[] style() default {};
+
     String concerns() default "";
 
-    // TODO: is this the right place for styler and principle? or should that go to separate annotation?
 }
