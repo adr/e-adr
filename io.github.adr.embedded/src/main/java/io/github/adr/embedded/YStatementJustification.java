@@ -7,7 +7,17 @@ import java.lang.annotation.*;
 // http://www.ifs.hsr.ch/Method-Selection-and-Tailoring.13195.0.html?&L=4
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.TYPE})
+@Target({
+    ElementType.ANNOTATION_TYPE,
+    ElementType.CONSTRUCTOR,
+    ElementType.FIELD,
+    ElementType.LOCAL_VARIABLE,
+    ElementType.METHOD,
+    ElementType.PACKAGE,
+    ElementType.PARAMETER,
+    ElementType.TYPE,
+    ElementType.TYPE_PARAMETER,
+    ElementType.TYPE_USE})
 @Inherited
 @Documented
 public @interface YStatementJustification {

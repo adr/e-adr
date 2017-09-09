@@ -2,14 +2,18 @@ package io.github.adr.embedded;
 
 import java.lang.annotation.*;
 
-// http://docs.oracle.com/javase/tutorial/java/annotations/basics.html
-// http://www.mkyong.com/java/java-custom-annotations-example/
-// http://tutorials.jenkov.com/java/annotations.html
-
-// annotation processing: http://hannesdorfmann.com/annotation-processing/annotationprocessing101
-// https://www.javacodegeeks.com/2015/09/java-annotation-processors.html
-
 @Retention(RetentionPolicy.RUNTIME)
+@Target({
+    ElementType.ANNOTATION_TYPE,
+    ElementType.CONSTRUCTOR,
+    ElementType.FIELD,
+    ElementType.LOCAL_VARIABLE,
+    ElementType.METHOD,
+    ElementType.PACKAGE,
+    ElementType.PARAMETER,
+    ElementType.TYPE,
+    ElementType.TYPE_PARAMETER,
+    ElementType.TYPE_USE})
 @Documented
 public @interface ArchitecturallySignificant {
 
