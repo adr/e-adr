@@ -6,10 +6,13 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-// TODO decide where to put the Y statement template text - defaults? IO helper? ...?
-// see IEEE SOftware/InfoQ article and SATURN 2012 presentation for introduction of Y statements (as well as AppArch lecture at HSR FHO)
-// http://www.ifs.hsr.ch/Method-Selection-and-Tailoring.13195.0.html?&L=4
-
+/**
+ * See <a href="https://www.infoq.com/articles/sustainable-architectural-design-decisions">IEEE Software/InfoQ article</a> and
+ * <a href="https://www.ifs.hsr.ch/fileadmin/user_upload/customers/ifs.hsr.ch/Home/projekte/ZIO-WFADSoftwareforenAGSWAAT8Nov2014v10p.pdf">SATURN 2012 presentation</a> for introduction of Y statements.
+ * More information is also given in the AppArch lecture at <a href="https://www.ifs.hsr.ch/">HSR FHO</a>.
+ *
+ * TODO decide where to put the Y statement template text - defaults? IO helper? ...?
+ */
 @Target({
     ElementType.ANNOTATION_TYPE,
     ElementType.CONSTRUCTOR,
