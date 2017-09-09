@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2017 Oliver Kopp, Olaf Zimmermann
+ * Copyright (c) 2017 Oliver Kopp, Olaf Zimmermann
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -11,14 +11,11 @@
  */
 package io.github.adr.embedded;
 
-import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
-import java.lang.annotation.Repeatable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@ADR(1)
 @Target({
     ElementType.ANNOTATION_TYPE,
     ElementType.CONSTRUCTOR,
@@ -30,19 +27,8 @@ import java.lang.annotation.Target;
     ElementType.TYPE,
     ElementType.TYPE_PARAMETER,
     ElementType.TYPE_USE})
-@ADR(2)
 @Retention(RetentionPolicy.RUNTIME)
-@Documented
-@Repeatable(DecisionsMade.class)
-public @interface DecisionMade {
+public @interface ADRs {
 
-    String id() default "AD-nn";
-
-    String solvedProblem() default "[not yet captured]";
-
-    String chosenOption();
-
-    String rationale() default "[not yet justified]";
-
-    String[] relatedDecisions() default {};
+    ADR[] value();
 }

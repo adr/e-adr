@@ -25,6 +25,7 @@ import java.lang.annotation.Target;
  *
  * TODO decide where to put the Y statement template text - defaults? IO helper? ...?
  */
+@ADR(1)
 @Target({
     ElementType.ANNOTATION_TYPE,
     ElementType.CONSTRUCTOR,
@@ -36,6 +37,7 @@ import java.lang.annotation.Target;
     ElementType.TYPE,
     ElementType.TYPE_PARAMETER,
     ElementType.TYPE_USE})
+@ADR(2)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Repeatable(YStatementJustifications.class)
