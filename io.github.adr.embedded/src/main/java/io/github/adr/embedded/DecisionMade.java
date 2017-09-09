@@ -3,7 +3,6 @@ package io.github.adr.embedded;
 import java.lang.annotation.*;
 
 @Retention(RetentionPolicy.RUNTIME)
-// allow it everywhere (see https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/ElementType.html), because we do not want to restrict the usage
 @Target({
     ElementType.ANNOTATION_TYPE,
     ElementType.CONSTRUCTOR,
