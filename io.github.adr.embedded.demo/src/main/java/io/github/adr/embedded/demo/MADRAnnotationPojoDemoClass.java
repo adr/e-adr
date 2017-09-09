@@ -15,8 +15,6 @@ package io.github.adr.embedded.demo;
 import io.github.adr.embedded.ArchitecturallySignificant;
 import io.github.adr.embedded.MADR;
 
-// TODO evaluate repeating annotations, typed annotations, see http://docs.oracle.com/javase/tutorial/java/annotations/basics.html
-
 @ArchitecturallySignificant(concerns = "performance and scalability needs", nfrs = {
     ArchitecturallySignificant.QualityAttribute.PERFORMANCE,
     ArchitecturallySignificant.QualityAttribute.MANAGEABILITY})
