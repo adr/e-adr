@@ -1,4 +1,4 @@
-package radar.ad.annproc;
+package io.github.adr.embedded.demo.annproc;
 
 import java.util.Set;
 
@@ -10,12 +10,12 @@ import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.TypeElement;
 
-import radar.ad.annotations.DecisionMade;
+import io.github.adr.embedded.DecisionMade;
 
-@SupportedAnnotationTypes("org.kopporolzzio.radar.ad.DecisionMade")
+@SupportedAnnotationTypes("io.github.adr.embedded.DecisionMade")
 @SupportedSourceVersion(SourceVersion.RELEASE_6)
 // @AutoService(Processor.class)
-public class ADAnnotationProcessor extends AbstractProcessor {
+public class EadrAnnotationProcessor extends AbstractProcessor {
 
     @Override
     public boolean process(final Set<? extends TypeElement> annotations, final RoundEnvironment roundEnv) {
@@ -29,13 +29,13 @@ public class ADAnnotationProcessor extends AbstractProcessor {
         }
         /*
         for( final Element element: roundEnv.getElementsAnnotatedWith(DecisionMade.class ) ) {
-        
+
                 final TypeElement typeElement = ( TypeElement )element;
-        
+
                 for( final Element eclosedElement: typeElement.getEnclosedElements() ) {
                     if( eclosedElement instanceof VariableElement ) {
                         final VariableElement variableElement = ( VariableElement )eclosedElement;
-        
+
                         /*
                         if( !variableElement.getModifiers().contains( Modifier.FINAL ) ) {
                             processingEnv.getMessager().printMessage( Diagnostic.Kind.ERROR,

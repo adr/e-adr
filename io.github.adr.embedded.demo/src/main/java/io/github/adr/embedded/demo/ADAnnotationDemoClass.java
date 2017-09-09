@@ -1,8 +1,8 @@
-package radar.ad.demo;
+package io.github.adr.embedded.demo;
 // import java.util.UUID;
 
-import radar.ad.annotations.ArchitecturallySignificant;
-import radar.ad.annotations.DecisionMade;
+import io.github.adr.embedded.ArchitecturallySignificant;
+import io.github.adr.embedded.DecisionMade;
 
 // TODO evaluate repeating annotations, typed annotations, see http://docs.oracle.com/javase/tutorial/java/annotations/basics.html
 

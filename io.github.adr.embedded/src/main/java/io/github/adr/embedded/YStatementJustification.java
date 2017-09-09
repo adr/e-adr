@@ -1,4 +1,4 @@
-package radar.ad.annotations;
+package io.github.adr.embedded;
 
 import java.lang.annotation.*;
 

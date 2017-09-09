@@ -1,4 +1,4 @@
-package radar.ad.demo;
+package io.github.adr.embedded.demo;
 
 import org.junit.Test;
 

@@ -1,9 +1,9 @@
-package radar.ad.demo;
+package io.github.adr.embedded.demo;
 
 import java.lang.annotation.Annotation;
 
-import radar.ad.annotations.ArchitecturallySignificant;
-import radar.ad.annotations.YStatementJustification;
+import io.github.adr.embedded.ArchitecturallySignificant;
+import io.github.adr.embedded.YStatementJustification;
 
 public class YStatementAnnotationDemoClassReflection {
 

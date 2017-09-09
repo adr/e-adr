@@ -1,7 +1,7 @@
-package radar.ad.demo;
+package io.github.adr.embedded.demo;
 // import java.util.UUID;
 
-import radar.ad.annotations.YStatementJustification;
+import io.github.adr.embedded.YStatementJustification;
 
 //@formatter:off
 @YStatementJustification(

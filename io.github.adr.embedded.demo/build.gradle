@@ -1,15 +1,10 @@
 apply plugin: 'java'
 
-// enables generation of eclipse project configurations via `gradlew eclipse`
-apply from: 'eclipse.gradle'
-
-group = 'io.github.adr'
-version = "0.1.0-SNAPSHOT"
-
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
 dependencies {
+	compile project(":io.github.adr.embedded")
     testCompile 'junit:junit:4.12'
 }
 
