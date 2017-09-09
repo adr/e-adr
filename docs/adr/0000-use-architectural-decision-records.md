@@ -1,16 +1,21 @@
-# Use Architectural Decision Records
+# Use Markdown Architectural Decision Records (madr)
 
-We need to record the architectural decisions made on this project.
+Should we record the architectural decisions made in this project?
+And if we do, wow to structure these recordings?
 
 ## Considered Alternatives
 
-* No record
-* [DecisionRecord](https://github.com/schubmat/DecisionCapture)
-* [Michael Nygard's template](http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions), maintainable by [adr-tools](https://github.com/npryce/adr-tools)
-* [Sustainable Architectural Decisions](https://www.infoq.com/articles/sustainable-architectural-design-decisions)
-* [Other templates](https://github.com/joelparkerhenderson/architecture_decision_record)
+* [madr](https://github.com/adr/madr) - Markdown Architectural Decision Records
+* [Michael Nygard's template](http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions) - The first incarnation of the term "ADR". Maintainable by [adr-tools](https://github.com/npryce/adr-tools).
+* [Sustainable Architectural Decisions](https://www.infoq.com/articles/sustainable-architectural-design-decisions) - The Y-Statements
+* [DecisionRecord](https://github.com/schubmat/DecisionCapture) - Agile records by [@schubmat](https://github.com/schubmat/)
+* Other templates listed at <https://github.com/joelparkerhenderson/architecture_decision_record>
+* No records
 
-## Conclusion
+## Decision Outcome
 
-* *Chosen Alternative: Decision Record*
-* That template is lean and fits most the development style
+* Chosen Alternative: madr
+* The madr template is lean and fits our development style.
+  Eat your own cookies.
+
+<!-- Pros and cons of alternatives straight-forward to elicit and therefore not captured. -->
