@@ -63,7 +63,7 @@ public @interface ArchitecturallySignificant {
 
     ArchitecuralPrinciple[] principles() default {};
 
-    ArchitecuralStyle[] style() default {};
+    ArchitecuralStyle[] styles() default {};
 
     String concerns() default "";
 
