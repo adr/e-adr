@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'checkstyle'
 
 // enables generation of eclipse project configurations via `gradlew eclipse`
 apply from: 'eclipse.gradle'
@@ -34,4 +35,8 @@ javadoc {
 
 repositories {
 	jcenter()
+}
+
+checkstyle {
+  toolVersion = '8.0'
 }

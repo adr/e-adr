@@ -1,12 +1,15 @@
 package io.github.adr.embedded;
 
-import java.lang.annotation.*;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 // TODO decide where to put the Y statement template text - defaults? IO helper? ...?
 // see IEEE SOftware/InfoQ article and SATURN 2012 presentation for introduction of Y statements (as well as AppArch lecture at HSR FHO)
 // http://www.ifs.hsr.ch/Method-Selection-and-Tailoring.13195.0.html?&L=4
 
-@Retention(RetentionPolicy.RUNTIME)
 @Target({
     ElementType.ANNOTATION_TYPE,
     ElementType.CONSTRUCTOR,
@@ -18,6 +21,7 @@ import java.lang.annotation.*;
     ElementType.TYPE,
     ElementType.TYPE_PARAMETER,
     ElementType.TYPE_USE})
+@Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface YStatementJustification {
 

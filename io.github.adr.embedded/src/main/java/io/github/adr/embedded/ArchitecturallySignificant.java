@@ -1,8 +1,11 @@
 package io.github.adr.embedded;
 
-import java.lang.annotation.*;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-@Retention(RetentionPolicy.RUNTIME)
 @Target({
     ElementType.ANNOTATION_TYPE,
     ElementType.CONSTRUCTOR,
@@ -14,6 +17,7 @@ import java.lang.annotation.*;
     ElementType.TYPE,
     ElementType.TYPE_PARAMETER,
     ElementType.TYPE_USE})
+@Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface ArchitecturallySignificant {
 
@@ -41,7 +45,6 @@ public @interface ArchitecturallySignificant {
         TBC,
         NONE // use Shaw/Garlan books and tbd as taxonomy
     }
-
 
     QualityAttribute[] nfrs() default QualityAttribute.MISC;
 
