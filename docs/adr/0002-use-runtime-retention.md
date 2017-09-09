@@ -1,5 +1,7 @@
 # Use Runtime Retention for the Annotations
 
+Which retention policy to use for `@ADR` annotations?
+
 ## Considered Alternatives
 
 * [RetentionPolicy.RUNTIME](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME)
