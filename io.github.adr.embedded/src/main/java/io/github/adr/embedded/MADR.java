@@ -57,4 +57,11 @@ public @interface MADR {
     String justification();
 
     String[] consequences() default {};
+
+    /**
+     * Decisions being related to this decision.
+     *
+     * @return the ids of related decisions
+     */
+    int[] relatedDecisions() default {};
 }
