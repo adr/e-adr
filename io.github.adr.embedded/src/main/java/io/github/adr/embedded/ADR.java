@@ -57,6 +57,8 @@ public @interface ADR {
 
     /**
      * The number part of the of the ADR. For instance, 1 gets expanded to the full id <code>ADR-0001</code>.
+     *
+     * @return Number of the ADR
      */
     int value();
 

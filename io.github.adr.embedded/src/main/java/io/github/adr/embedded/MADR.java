@@ -38,41 +38,51 @@ public @interface MADR {
 
     /**
      * The number part of the of the ADR. For instance, 1 gets expanded to the full id <code>ADR-0001</code>.
+     *
+     * @return The number of the ADR
      */
     int value();
 
     /**
      * Short title of solved problem and solution
+     *
+     * @return title
      */
     String title();
 
     /**
-     * The user story belonging to this ADR. Typically a reference to the ticket in the issue tracker
+     * The user story belonging to this ADR. Typically a reference to the ticket in the issue tracker.
+     *
+     * @return User story as reference.
      */
     String userStory() default "";
 
     /**
-     * context and problem statement
+     * @return Context and problem statement
      */
     String contextAndProblem();
 
     /**
      * Considered alternatives. May be omitted if {@link Alternative} annotations are used.
+     *
+     * @return Considred alternatives
      */
     String[] alternatives() default {};
 
     /**
-     * The chosen alternative
+     * The chosen alternative. Invariant: alternatives().contains(chosenAlternative())
+     *
+     * @return Chosen alternative
      */
     String chosenAlternative();
 
     /**
-     * Justification. e.g., only alternative, which meets k.o. criterion decision driver | which resolves force force | ... | comes out best (see below)
+     * @return Justification. e.g., only alternative, which meets k.o. criterion decision driver | which resolves force force | ... | comes out best (see below)
      */
     String justification();
 
     /**
-     * Consequences. e.g., negative impact on quality attribute, follow-up decisions required, ...
+     * @return Consequences. e.g., negative impact on quality attribute, follow-up decisions required, ...
      */
     String[] consequences() default {};
 
