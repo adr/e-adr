@@ -33,3 +33,9 @@ public class MADRAnnotationDemoClass {
 
 
 See <https://adr.github.io> for more information on ADRs.
+
+
+## Development information
+
+`gradlew assemble` requires the upload to maven central configured properly.
+Thus, please use `gradlew jar` to generate the jar.
