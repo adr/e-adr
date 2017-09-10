@@ -1,9 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'checkstyle'
 
-// enables generation of eclipse project configurations via `gradlew eclipse`
-apply from: 'eclipse.gradle'
-
 group = 'io.github.adr'
 version = "0.1.0-SNAPSHOT"
 
