@@ -1,6 +1,7 @@
 # Embedded Architectural Decision Records
 
 [![Build Status](https://travis-ci.org/adr/e-adr.svg?branch=master)](https://travis-ci.org/adr/e-adr)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr)
 [![License](https://img.shields.io/badge/license-EPL-blue.svg)](LICENSE.md)
 
 We believe that [architectural decisions](https://en.wikipedia.org/wiki/Architectural_decision) are important for an success of a project.
