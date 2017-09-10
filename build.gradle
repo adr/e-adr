@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'checkstyle'
 
 group = 'io.github.adr'
-version = '1.0.0'
+version = '1.1.0-SNAPSHOT'
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
