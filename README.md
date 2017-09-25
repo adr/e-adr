@@ -34,6 +34,18 @@ public class MADRAnnotationDemoClass {
 ```
 
 
+<!--
+Architectural knowledge captured in architectural designs and decisions is primarily created and consumed in tools made for software architects.
+Developers, also consuming and creating architectural knowledge, do not always use such tools;
+this adds to the gap between these two roles often observed in practice.
+Architectural erosion and knowledge vaporization are two of the consequences.
+
+With this repository, we show how to narrow the gap with architecture domain-specific Java annotations.
+These annotations allow developers to reference and create architectural decision knowledge directly in code.
+This knowledge can then automatically be processed by other tools to provide additional integration and collaboration capabilities.
+-->
+
+
 See <https://adr.github.io> for more information on ADRs.
 
 
