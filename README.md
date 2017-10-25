@@ -15,7 +15,20 @@ Currently, following architectural decision records are supported:
 - [Markdown Architectural Decision Records](https://github.com/adr/madr) ("MADR") - lean architecture decision records using markdown.
 
 
-Example:
+## Examples
+
+### Example for a linked ADR
+
+```java
+@ADR(1)
+public class MADRAnnotationDemoClass {
+    public int sampleBusinessLogic(String input) {
+        return 42;
+    }
+}
+```
+
+### Example for complete embedding
 
 ```java
 @MADR(value = 1,
@@ -26,7 +39,6 @@ Example:
     justification = "Because it is a company-wide policy, see http://www.iaas.uni-stuttgart.de/institut/ehemalige/zimmermann/indexE.php",
     relatedDecisions = {2, 3})
 public class MADRAnnotationDemoClass {
-
     public int sampleBusinessLogic(String input) {
         return 42;
     }
