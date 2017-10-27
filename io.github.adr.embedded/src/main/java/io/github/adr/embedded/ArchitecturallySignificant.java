@@ -45,7 +45,7 @@ public @interface ArchitecturallySignificant {
     }
 
     public enum ArchitecuralPrinciple {
-        LOOSE_COULING,
+        LOOSE_COUPLING,
         SEPARATION_OF_CONCERNS,
         TBC,
         NONE // use Eoin Woods keynote from WICSA 2008 as input?
