@@ -7,13 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-### Fixed
+### Added
+- Support for Java9
+- Refined example in README.md
 
-- Fix typo in ArchitecturallySignificant annotation
+### Fixed
+- Fix typo in `ArchitecturallySignificant` annotation
+
 
 ## [1.0.0] – 2017-09-10
 
 First release of embedded ADRs.
 
-[unreleased]: https://github.com/adr/e-adr/compare/v1.0.0...master
-[1.0.0]: https://github.com/adr/e-adr/releases/tag/v1.0.0
+[unreleased]: https://github.com/adr/e-adr/compare/1.0.0...master
+[1.0.0]: https://github.com/adr/e-adr/releases/tag/1.0.0
