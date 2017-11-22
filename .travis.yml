@@ -1,6 +1,8 @@
 language: java
+group: edge
 jdk:
   - oraclejdk8
+  - oraclejdk9
 sudo: false
 install: true
 
