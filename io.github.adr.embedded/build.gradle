@@ -38,6 +38,12 @@ javadoc {
 	}
 }
 
+jar {
+  manifest {
+    attributes('Automatic-Module-Name': 'io.github.adr.embedded')
+  }
+}
+
 repositories {
 	jcenter()
 }
