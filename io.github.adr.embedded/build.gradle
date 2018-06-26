@@ -88,7 +88,7 @@ uploadArchives {
 
         scm {
           connection 'scm:git:https://github.com/adr/e-adr.git'
-          developerConnection 'scm:git:github.com:adr/embedded-adl.git'
+          developerConnection 'scm:git:github.com:adr/e-adr.git'
           url 'https://github.com/adr/e-adr/tree/master'
         }
 
