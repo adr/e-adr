@@ -30,7 +30,7 @@ import java.lang.annotation.Target;
     ElementType.TYPE,
     ElementType.TYPE_PARAMETER,
     ElementType.TYPE_USE})
-@ADR(2)
+// @ADR(2) // commented out, does not compile (Java 1.8/Eclipse JEE Photon)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Repeatable(MADRs.class)
