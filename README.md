@@ -60,6 +60,24 @@ The convetion is that the decisions are stored in `docs/adr/` with a running num
 They can be of an arbirary format, such as MADR or [Michael Nygard's format](http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions), which is supported by [adr-tools](https://github.com/npryce/adr-tools).
 Example MADRs can be seen at the [ADR log of the adr-log tool](https://github.com/adr/adr-log/blob/master/docs/adr/index.md).
 
+## Use in your projects
+
+Gradle:
+
+```groovy
+compile 'io.github.adr:e-adr:1.0.0'
+```
+
+Maven:
+
+```xml
+<dependency>
+  <groupId>io.github.adr</groupId>
+  <artifactId>e-adr</artifactId>
+  <version>1.0.0</version>
+</dependency>
+```
+
 ## Development information
 
 `gradlew assemble` requires the upload to maven central configured properly.
