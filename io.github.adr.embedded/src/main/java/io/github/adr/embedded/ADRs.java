@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 Oliver Kopp, Olaf Zimmermann
+ * Copyright (c) 2017-2021 Oliver Kopp, Olaf Zimmermann
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
@@ -17,20 +17,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target({
-    ElementType.ANNOTATION_TYPE,
-    ElementType.CONSTRUCTOR,
-    ElementType.FIELD,
-    ElementType.LOCAL_VARIABLE,
-    ElementType.METHOD,
-    ElementType.PACKAGE,
-    ElementType.PARAMETER,
-    ElementType.TYPE,
-    ElementType.TYPE_PARAMETER,
-    ElementType.TYPE_USE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface ADRs {
-
     ADR[] value();
 }
