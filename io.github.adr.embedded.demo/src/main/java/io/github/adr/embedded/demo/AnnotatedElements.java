@@ -27,7 +27,7 @@ public class AnnotatedElements {
         @ADR(3)
         int result;
 
-        // not possible -> no declaration
+        // not possible -> no declaration (see https://stackoverflow.com/q/8425674/873282)
         // @ADR(3)
         if (UUID.randomUUID().toString().startsWith("0")) {
             // not possible -> no declaration

@@ -1,0 +1,17 @@
+name: Check
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [ '8' ]
+    name: Java ${{ matrix.Java }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: ${{ matrix.java }}
+          cache: 'gradle'
+      - run: ./gradlew check --info

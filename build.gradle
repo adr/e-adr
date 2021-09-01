@@ -30,10 +30,11 @@ javadoc {
 	}
 }
 
-repositories {
-	jcenter()
-}
-
 checkstyle {
   toolVersion = '8.0'
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
 }

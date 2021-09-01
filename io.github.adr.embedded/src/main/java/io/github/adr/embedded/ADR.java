@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017 Oliver Kopp, Olaf Zimmermann
+ * Copyright (c) 2017-2021 Oliver Kopp, Olaf Zimmermann
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v2.0
@@ -19,17 +19,6 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @ADR(1)
-@Target({
-    ElementType.ANNOTATION_TYPE,
-    ElementType.CONSTRUCTOR,
-    ElementType.FIELD,
-    ElementType.LOCAL_VARIABLE,
-    ElementType.METHOD,
-    ElementType.PACKAGE,
-    ElementType.PARAMETER,
-    ElementType.TYPE,
-    ElementType.TYPE_PARAMETER,
-    ElementType.TYPE_USE})
 @MADR(
     value = 2,
     title = "Use Runtime Retention for the Annotations",
@@ -56,7 +45,7 @@ import java.lang.annotation.Target;
 public @interface ADR {
 
     /**
-     * The number part of the of the ADR. For instance, 1 gets expanded to the full id <code>ADR-0001</code>.
+     * The number part of the ADR. For instance, 1 gets expanded to the full id <code>ADR-0001</code>.
      *
      * @return Number of the ADR
      */
