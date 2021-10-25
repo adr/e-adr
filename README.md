@@ -82,3 +82,9 @@ Maven:
 
 `gradlew assemble` requires the upload to maven central configured properly.
 Thus, please use `gradlew jar` to generate the jar.
+
+## Related work
+
+* [Documenting Implementation Decisions with Code Annotations](https://www.researchgate.net/publication/280014035_Documenting_Implementation_Decisions_with_Code_Annotations)
+  * Uses JavaDoc
+  * Requires external tool to allow for auto completion
