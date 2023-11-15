@@ -11,4 +11,3 @@
 
 * *Chosen Alternative: Allow everywhere*
 * This allows the annotation to be present everywhere, because this does not restrict the usage by the developer
- 
