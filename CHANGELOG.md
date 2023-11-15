@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 ### Added
--
+
 - Support for Java9
 - Refined example in `README.md`
 

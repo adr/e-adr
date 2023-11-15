@@ -1,0 +1,7 @@
+default: true
+
+# allow arbitrary line length
+MD013: false
+
+MD033:
+  allowed_elements: ['kbd']
