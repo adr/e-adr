@@ -2,7 +2,7 @@
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr)
 [![Javadocs](https://javadoc.io/badge/io.github.adr/e-adr.svg)](https://javadoc.io/doc/io.github.adr/e-adr)
-[![License](https://img.shields.io/badge/license-EPL-blue.svg)](LICENSE.md)
+[![License](https://img.shields.io/badge/license-EPL-blue.svg)](LICENSE)
 
 > Architectural knowledge captured in architectural designs and [architectural decisions](https://en.wikipedia.org/wiki/Architectural_decision) is primarily created and consumed in tools made for software architects.
 > Developers, also consuming and creating architectural knowledge, do not always use such tools;
