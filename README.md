@@ -20,7 +20,6 @@ Currently, following architectural decision records are supported:
 
 See <https://adr.github.io> for more information on architectural decision records.
 
-
 ## Examples
 
 ### Example for complete embedding
@@ -84,6 +83,6 @@ Thus, please use `gradlew jar` to generate the jar.
 
 ## Related work
 
-* [Documenting Implementation Decisions with Code Annotations](https://www.researchgate.net/publication/280014035_Documenting_Implementation_Decisions_with_Code_Annotations)
-  * Uses JavaDoc
-  * Requires external tool to allow for auto completion
+- [Documenting Implementation Decisions with Code Annotations](https://www.researchgate.net/publication/280014035_Documenting_Implementation_Decisions_with_Code_Annotations)
+  - Uses JavaDoc
+  - Requires external tool to allow for auto completion
