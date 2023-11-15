@@ -18,6 +18,6 @@ Further reading
 - <http://docs.oracle.com/javase/tutorial/java/annotations/basics.html>
 - <http://www.mkyong.com/java/java-custom-annotations-example/>
 - <http://tutorials.jenkov.com/java/annotations.html>
-- annotation processing: 
+- annotation processing:
   - <http://hannesdorfmann.com/annotation-processing/annotationprocessing101>
   - <https://www.javacodegeeks.com/2015/09/java-annotation-processors.html>
