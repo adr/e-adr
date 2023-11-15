@@ -1,6 +1,5 @@
 # Embedded Architectural Decision Records
 
-[![Build Status](https://travis-ci.org/adr/e-adr.svg?branch=master)](https://travis-ci.org/adr/e-adr)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr)
 [![Javadocs](https://javadoc.io/badge/io.github.adr/e-adr.svg)](https://javadoc.io/doc/io.github.adr/e-adr)
 [![License](https://img.shields.io/badge/license-EPL-blue.svg)](LICENSE.md)
