@@ -4,14 +4,14 @@ Which retention policy to use for `@ADR` annotations?
 
 ## Considered Alternatives
 
-* [RetentionPolicy.RUNTIME](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME)
-* [RetentionPolicy.CLASS](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#CLASS)
-* [RetentionPolicy.SOURCE](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE)
+- [RetentionPolicy.RUNTIME](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME)
+- [RetentionPolicy.CLASS](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#CLASS)
+- [RetentionPolicy.SOURCE](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE)
 
 ## Decision Outcome
 
-* *Chosen Alternative: RetentionPolicy.RUNTIME*
-* This allows the annotation to be processed both at compilation and runtime.
+- *Chosen Alternative: RetentionPolicy.RUNTIME*
+- This allows the annotation to be processed both at compilation and runtime.
 
 Further reading
 
