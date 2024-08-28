@@ -4,37 +4,24 @@ apply plugin: 'checkstyle'
 group = 'io.github.adr'
 version = '1.1.0-SNAPSHOT'
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+sourceCompatibility = '21'
+targetCompatibility = '21'
 
 dependencies {
-    testImplementation  'junit:junit:4.13'
-}
-
-compileJava {
-	// files are all encoded using UTF-8
-	options.encoding = 'UTF-8'
-}
-
-compileTestJava {
-	// files are all encoded using UTF-8
-	options.encoding = 'UTF-8'
+    testImplementation  'junit:junit:4.13.2'
 }
 
 javadoc {
 	options {
-		// files are all encoded using UTF-8
-		encoding = 'UTF-8'
 		version = true
 		author = true
 	}
 }
 
 checkstyle {
-  toolVersion = '8.0'
+  toolVersion = '10.18.0'
 }
 
 repositories {
-  mavenLocal()
   mavenCentral()
 }

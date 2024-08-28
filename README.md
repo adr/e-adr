@@ -1,9 +1,8 @@
 # Embedded Architectural Decision Records
 
-[![Build Status](https://travis-ci.org/adr/e-adr.svg?branch=master)](https://travis-ci.org/adr/e-adr)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr)
 [![Javadocs](https://javadoc.io/badge/io.github.adr/e-adr.svg)](https://javadoc.io/doc/io.github.adr/e-adr)
-[![License](https://img.shields.io/badge/license-EPL-blue.svg)](LICENSE.md)
+[![License](https://img.shields.io/badge/license-EPL-blue.svg)](LICENSE)
 
 > Architectural knowledge captured in architectural designs and [architectural decisions](https://en.wikipedia.org/wiki/Architectural_decision) is primarily created and consumed in tools made for software architects.
 > Developers, also consuming and creating architectural knowledge, do not always use such tools;
@@ -20,7 +19,6 @@ Currently, following architectural decision records are supported:
 - [Markdown Architectural Decision Records](https://github.com/adr/madr) ("MADR") - lean architecture decision records using markdown.
 
 See <https://adr.github.io> for more information on architectural decision records.
-
 
 ## Examples
 
@@ -82,3 +80,9 @@ Maven:
 
 `gradlew assemble` requires the upload to maven central configured properly.
 Thus, please use `gradlew jar` to generate the jar.
+
+## Related work
+
+- [Documenting Implementation Decisions with Code Annotations](https://www.researchgate.net/publication/280014035_Documenting_Implementation_Decisions_with_Code_Annotations)
+  - Uses JavaDoc
+  - Requires external tool to allow for auto completion
