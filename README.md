@@ -63,7 +63,7 @@ Example MADRs can be seen at the [ADR log of the adr-log tool](https://github.co
 Gradle:
 
 ```groovy
-compile 'io.github.adr:e-adr:1.0.0'
+implementation 'io.github.adr:e-adr:1.0.0'
 ```
 
 Maven:

@@ -1,14 +1,3 @@
-/*
- * Copyright (c) 2016-2017 Oliver Kopp, Olaf Zimmermann
- *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v2.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v20.html
- *
- * Contributors:
- *   Oliver Kopp, Olaf Zimmermann - initial API and implementation
- */
 package io.github.adr.embedded;
 
 import java.lang.annotation.Documented;
@@ -30,7 +19,7 @@ import java.lang.annotation.Target;
     ElementType.TYPE_PARAMETER,
     ElementType.TYPE_USE})
 @ADR(2)
-@Retention(RetentionPolicy.RUNTIME)
+@Retention(RetentionPolicy.SOURCE)
 @Documented
 public @interface ArchitecturallySignificant {
 
@@ -51,7 +40,7 @@ public @interface ArchitecturallySignificant {
         NONE // use Eoin Woods keynote from WICSA 2008 as input?
     }
 
-    public enum ArchitecuralStyle {
+    public enum ArchitecturalStyle {
         SOA,
         MESSAGING,
         CLIENT_SERVER,
@@ -63,7 +52,7 @@ public @interface ArchitecturallySignificant {
 
     ArchitecuralPrinciple[] principles() default {};
 
-    ArchitecuralStyle[] styles() default {};
+    ArchitecturalStyle[] styles() default {};
 
     String concerns() default "";
 

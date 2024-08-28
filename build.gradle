@@ -1,40 +1,39 @@
-apply plugin: 'java'
-apply plugin: 'checkstyle'
+plugins {
+  id "io.github.gradle-nexus.publish-plugin" version "2.0.0"
+}
 
 group = 'io.github.adr'
 version = '1.1.0-SNAPSHOT'
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+allprojects {
+  apply plugin: 'java'
 
-dependencies {
-    testCompile 'junit:junit:4.13.2'
+  group = 'io.github.adr'
+  version = '1.1.0-SNAPSHOT'
+  ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
+
+  repositories {
+    mavenCentral()
+  }
+
+  java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+
+    withJavadocJar()
+    withSourcesJar()
+  }
+
+  dependencies {
+    testImplementation 'junit:junit:4.13.2'
+  }
 }
 
-compileJava {
-	// files are all encoded using UTF-8
-	options.encoding = 'UTF-8'
-}
-
-compileTestJava {
-	// files are all encoded using UTF-8
-	options.encoding = 'UTF-8'
-}
-
-javadoc {
-	options {
-		// files are all encoded using UTF-8
-		encoding = 'UTF-8'
-		version = true
-		author = true
-	}
-}
-
-checkstyle {
-  toolVersion = '8.0'
-}
-
-repositories {
-  mavenLocal()
-  mavenCentral()
+// Needs to be in the root build.gradle
+// See https://github.com/gradle-nexus/publish-plugin/issues/81 for details
+nexusPublishing {
+  repositories {
+    // e-adr was registered before 2021
+    sonatype()
+  }
 }

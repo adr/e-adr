@@ -10,8 +10,8 @@ Which retention policy to use for `@ADR` annotations?
 
 ## Decision Outcome
 
-- *Chosen Alternative: RetentionPolicy.RUNTIME*
-- This allows the annotation to be processed both at compilation and runtime.
+- *Chosen Alternative: RetentionPolicy.SOURCE*
+- We do not need the annotations during runtime. The byte code should be unchanged.
 
 Further reading
 

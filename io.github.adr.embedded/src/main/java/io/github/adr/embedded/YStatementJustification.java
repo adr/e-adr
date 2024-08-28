@@ -38,7 +38,7 @@ import java.lang.annotation.Target;
     ElementType.TYPE_PARAMETER,
     ElementType.TYPE_USE})
 @ADR(2)
-@Retention(RetentionPolicy.RUNTIME)
+@Retention(RetentionPolicy.SOURCE)
 @Documented
 @Repeatable(YStatementJustifications.class)
 public @interface YStatementJustification {
