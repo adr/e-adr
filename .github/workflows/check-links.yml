@@ -1,7 +1,13 @@
 name: Check external href links
 
 on:
+  pull_request:
+    paths:
+      - '.github/workflows/check-links.yml'
+      - '**/*.md'
   push:
+    branches:
+      - main
     paths:
       - '.github/workflows/check-links.yml'
       - '**/*.md'
@@ -21,6 +27,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           show-progress: 'false'
+      - uses: gautamkrishnar/keepalive-workflow@v2
       - name: Restore lychee cache
         uses: actions/cache@v4
         with:
