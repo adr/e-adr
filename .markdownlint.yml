@@ -5,3 +5,6 @@ MD013: false
 
 MD033:
   allowed_elements: ['kbd']
+
+# because of PULL_REQUEST_TEMPLATE.md
+MD041: false
