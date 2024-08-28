@@ -14,7 +14,7 @@ jar {
 publishing {
   publications {
     mavenJava(MavenPublication) {
-      artifactId = 'afterburner.fx'
+      artifactId = 'e-adr'
       from components.java
       pom {
         name ='Embedded Architectural Decision Records'
