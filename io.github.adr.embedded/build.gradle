@@ -1,6 +1,8 @@
 plugins {
   id 'java-library'
+
   // maven-publish is the successor of maven plugin
+  // Also required by https://github.com/gradle-nexus/publish-plugin?tab=readme-ov-file
   id 'maven-publish'
   id 'signing'
 }
@@ -48,15 +50,4 @@ signing {
   required = isReleaseVersion
   useInMemoryPgpKeys(System.getenv("SIGNING_KEY"), System.getenv("SIGNING_PASSWORD"))
   sign publishing.publications.mavenJava
-}
-
-nexusPublishing {
-  repositories {
-    sonatype {
-      username = System.getenv("MAVEN_USERNAME")
-      password = System.getenv("MAVEN_PASSWORD")
-      nexusUrl.set(uri("https://oss.sonatype.org/service/local/staging/deploy/maven2/"))
-      snapshotRepositoryUrl.set(uri("https://oss.sonatype.org/content/repositories/snapshots/"))
-    }
-  }
 }

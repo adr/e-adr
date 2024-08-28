@@ -33,3 +33,12 @@ allprojects {
     toolVersion = '10.18.0'
   }
 }
+
+// Needs to be in the root build.gradle
+// See https://github.com/gradle-nexus/publish-plugin/issues/81 for details
+nexusPublishing {
+  repositories {
+    // e-adr was registered before 2021
+    sonatype()
+  }
+}
