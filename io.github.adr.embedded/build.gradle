@@ -1,41 +1,8 @@
-apply plugin: 'java'
-apply plugin: 'maven'
-apply plugin: 'signing'
-
-// group has to be specified here, too
-// otherwise, Gradle's uploadArchives task uses "e-adr" as group name
-group = 'io.github.adr'
-
-archivesBaseName = 'e-adr'
-
-// version has specified here, too
-// otherwise, Gradle's uploadArchives task uses "unspecified" as version name
-version = '1.1.0-SNAPSHOT'
-
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
-
-dependencies {
-    testCompile 'junit:junit:4.13.2'
-}
-
-compileJava {
-	// files are all encoded using UTF-8
-	options.encoding = 'UTF-8'
-}
-
-compileTestJava {
-	// files are all encoded using UTF-8
-	options.encoding = 'UTF-8'
-}
-
-javadoc {
-	options {
-		// files are all encoded using UTF-8
-		encoding = 'UTF-8'
-		version = true
-		author = true
-	}
+plugins {
+  id 'java-library'
+  // maven-publish is the successor of maven plugin
+  id 'maven-publish'
+  id 'signing'
 }
 
 jar {
@@ -44,69 +11,53 @@ jar {
   }
 }
 
-repositories {
-	jcenter()
-}
-
-task javadocJar(type: Jar) {
-  classifier = 'javadoc'
-  from javadoc
-}
-
-task sourcesJar(type: Jar) {
-  classifier = 'sources'
-  from sourceSets.main.allSource
-}
-
-artifacts {
-  archives javadocJar, sourcesJar
-}
-
-signing {
-  sign configurations.archives
-}
-
-uploadArchives {
-  repositories {
-    mavenDeployer {
-      beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
-
-      repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-        authentication(userName: ossrhUsername, password: ossrhPassword)
-      }
-
-      snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
-        authentication(userName: ossrhUsername, password: ossrhPassword)
-      }
-
-      pom.project {
-        name 'Embedded Architectural Decision Records'
-        packaging 'jar'
-        // optionally artifactId can be defined here
-        description 'Architectural Decision Records embedded in Java code'
-        url 'https://github.com/adr/e-adr/'
-
-        scm {
-          connection 'scm:git:https://github.com/adr/e-adr.git'
-          developerConnection 'scm:git:github.com:adr/e-adr.git'
-          url 'https://github.com/adr/e-adr/tree/master'
-        }
+publishing {
+  publications {
+    mavenJava(MavenPublication) {
+      artifactId = 'afterburner.fx'
+      from components.java
+      pom {
+        name ='Embedded Architectural Decision Records'
+        description = 'Architectural Decision Records embedded in Java code'
+        url = 'https://github.com/adr/e-adr/'
 
         licenses {
           license {
-            name 'Eclipse Public License - v 2.0'
-            url 'https://www.eclipse.org/org/documents/epl-2.0/'
+            name = 'Eclipse Public License - v 2.0'
+            url = 'https://www.eclipse.org/org/documents/epl-2.0/'
           }
         }
-
         developers {
           developer {
-            id 'koppor'
-            name 'Oliver Kopp'
-            email 'kopp.dev@gmail.com'
+            id = 'koppor'
+            name = 'Oliver Kopp'
+            email = 'kopp.dev@gmail.com'
           }
+        }
+        scm {
+          url = 'https://github.com/adr/e-adr'
+          connection = 'scm:git:https://github.com/adr/e-adr.git'
+          developerConnection = 'scm:git:github.com:adr/e-adr.git'
         }
       }
     }
   }
 }
+
+signing {
+  required = isReleaseVersion
+  useInMemoryPgpKeys(System.getenv("SIGNING_KEY"), System.getenv("SIGNING_PASSWORD"))
+  sign publishing.publications.mavenJava
+}
+
+nexusPublishing {
+  repositories {
+    sonatype {
+      username = System.getenv("MAVEN_USERNAME")
+      password = System.getenv("MAVEN_PASSWORD")
+      nexusUrl.set(uri("https://oss.sonatype.org/service/local/staging/deploy/maven2/"))
+      snapshotRepositoryUrl.set(uri("https://oss.sonatype.org/content/repositories/snapshots/"))
+    }
+  }
+}
+

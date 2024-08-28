@@ -1,32 +1,3 @@
-apply plugin: 'java'
-
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
-
 dependencies {
-	compile project(":io.github.adr.embedded")
-    testCompile 'junit:junit:4.13.2'
-}
-
-compileJava {
-	// files are all encoded using UTF-8
-	options.encoding = 'UTF-8'
-}
-
-compileTestJava {
-	// files are all encoded using UTF-8
-	options.encoding = 'UTF-8'
-}
-
-javadoc {
-	options {
-		// files are all encoded using UTF-8
-		encoding = 'UTF-8'
-		version = true
-		author = true
-	}
-}
-
-repositories {
-	jcenter()
+	implementation project(":io.github.adr.embedded")
 }

@@ -9,8 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-- Support for Java9
 - Refined example in `README.md`
+
+### Changed
+
+- Updated to Java 21
 
 ### Fixed
 
