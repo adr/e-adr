@@ -14,10 +14,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - Updated to Java 21
+- Change to `RetentionPolicy.SOURCE`
 
 ### Fixed
 
-- Fix typo in `ArchitecturallySignificant` annotation
+- Fix typo in `ArchitecturallySignificant` and `ArchitecturalStyle`
 
 ## [1.0.0] – 2017-09-10
 
