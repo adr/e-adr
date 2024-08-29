@@ -20,6 +20,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix typo in `ArchitecturallySignificant` and `ArchitecturalStyle`
 
+### Removed
+
+- Removed `@Alternatives` annotation, because it was not well-defined. Follow up is [#22](https://github.com/adr/e-adr/issues/22).
+
 ## [1.0.0] – 2017-09-10
 
 First release of embedded ADRs.
