@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Refined example in `README.md`
+- Added `@ADRref` annotation to allow referencing ADRS having an arbitrary identifier syntax (and not numbers only). [#29](https://github.com/adr/e-adr/pull/29)
 
 ### Changed
 
