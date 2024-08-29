@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 /**
  * Required for <code>@Repeatable</code> at {@link ADR}.
  */
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.CLASS)
 @Documented
 public @interface ADRs {
     ADR[] value();
