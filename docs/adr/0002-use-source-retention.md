@@ -1,8 +1,10 @@
 # Use Runtime Retention for the Annotations
 
+## Context and Problem Statement
+
 Which retention policy to use for `@ADR` annotations?
 
-## Considered Alternatives
+## Considered Options
 
 - [RetentionPolicy.RUNTIME](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME)
 - [RetentionPolicy.CLASS](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#CLASS)
@@ -10,10 +12,9 @@ Which retention policy to use for `@ADR` annotations?
 
 ## Decision Outcome
 
-- *Chosen Alternative: RetentionPolicy.SOURCE*
-- We do not need the annotations during runtime. The byte code should be unchanged.
+Chosen option: "RetentionPolicy.RUNTIME", because, we do not need the annotations during runtime. The byte code should be unchanged.
 
-Further reading
+## More Information
 
 - <http://docs.oracle.com/javase/tutorial/java/annotations/basics.html>
 - <http://www.mkyong.com/java/java-custom-annotations-example/>
