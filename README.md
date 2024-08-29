@@ -15,8 +15,8 @@ This knowledge can then automatically be processed by other tools to provide add
 
 Currently, following architectural decision records are supported:
 
+- [Markdown Architectural Decision Records](https://github.com/adr/madr) ("MADR") - lean architecture decision records using markdown
 - Y-Statements - [Sustainable Architectural Decision Records](https://www.infoq.com/articles/sustainable-architectural-design-decisions)
-- [Markdown Architectural Decision Records](https://github.com/adr/madr) ("MADR") - lean architecture decision records using markdown.
 
 See <https://adr.github.io> for more information on architectural decision records.
 
@@ -60,10 +60,12 @@ Example MADRs can be seen at the [ADR log of the adr-log tool](https://github.co
 
 ## Use in your projects
 
+[Search maven central](https://search.maven.org/search?q=a:e-adr) for the latest version.
+
 Gradle:
 
 ```groovy
-implementation 'io.github.adr:e-adr:1.0.0'
+implementation 'io.github.adr:e-adr:{version}'
 ```
 
 Maven:
@@ -72,14 +74,14 @@ Maven:
 <dependency>
   <groupId>io.github.adr</groupId>
   <artifactId>e-adr</artifactId>
-  <version>1.0.0</version>
+  <version>{version}</version>
 </dependency>
 ```
 
 ## Development information
 
-`gradlew assemble` requires the upload to maven central configured properly.
-Thus, please use `gradlew jar` to generate the jar.
+To upload to maven central, the gradle task `publsihToSonatype` at `io.github.adr.embedded` is used.
+Thereby the [Gradle Nexus Publish Plugin](https://github.com/gradle-nexus/publish-plugin/) plugin is used.
 
 ## Related work
 
