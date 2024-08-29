@@ -29,7 +29,7 @@ import io.github.adr.linked.ADR;
     ElementType.TYPE_PARAMETER,
     ElementType.TYPE_USE})
 @ADR(2)
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.CLASS)
 @Documented
 @Repeatable(YStatementJustifications.class)
 public @interface YStatementJustification {

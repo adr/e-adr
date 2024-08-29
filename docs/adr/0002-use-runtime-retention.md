@@ -12,7 +12,8 @@ Which retention policy to use for `@ADR` annotations?
 
 ## Decision Outcome
 
-Chosen option: "RetentionPolicy.RUNTIME", because, we do not need the annotations during runtime. The byte code should be unchanged.
+Chosen option: "RetentionPolicy.RUNTIME", because we want to enable reflection on classes.
+We accept that the bytecode is larger.
 
 ## More Information
 
