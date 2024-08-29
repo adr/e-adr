@@ -54,7 +54,7 @@ public @interface MADR {
     String contextAndProblem();
 
     /**
-     * Considered alternatives. May be omitted if {@link Alternative} annotations are used.
+     * Considered alternatives.
      *
      * @return Considered alternatives
      */
