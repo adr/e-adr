@@ -38,7 +38,7 @@ test {
 
 jar {
   manifest {
-    attributes('Automatic-Module-Name': 'io.github.adr.embedded')
+    attributes('Automatic-Module-Name': 'io.github.adr')
   }
 }
 
