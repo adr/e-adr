@@ -9,7 +9,7 @@
  * Contributors:
  *   Oliver Kopp, Olaf Zimmermann - initial API and implementation
  */
-package io.github.adr.embedded.demo;
+package io.github.adr.embedded;
 
 import java.util.UUID;
 
@@ -18,6 +18,8 @@ import io.github.adr.linked.ADR;
 /**
  * Annotations can, by design, not put everywhere.
  * See https://stackoverflow.com/a/8425778/873282
+ *
+ * This class is in test, because it tests if it compiles.
  */
 @ADR(1)
 public class AnnotatedElements {

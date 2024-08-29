@@ -1,7 +1,5 @@
-package io.github.adr.embedded.demo;
+package io.github.adr.embedded;
 // import java.util.UUID;
-
-import io.github.adr.embedded.YStatementJustification;
 
 @YStatementJustification(
         chosen = "we decided to implement business logic in POJOs",
