@@ -1,41 +1,86 @@
 plugins {
+  id 'java-library'
+
+  // maven-publish is the successor of maven plugin
+  // Also required by https://github.com/gradle-nexus/publish-plugin?tab=readme-ov-file
+  id 'maven-publish'
+  id 'signing'
   id "io.github.gradle-nexus.publish-plugin" version "2.0.0"
 }
+
+apply plugin: 'java'
 
 group = 'io.github.adr'
 version = '2.0.0-SNAPSHOT'
 
-allprojects {
-  apply plugin: 'java'
+ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
 
-  group = 'io.github.adr'
-  version = '1.1.0-SNAPSHOT'
-  ext.isReleaseVersion = !version.endsWith("SNAPSHOT")
+dependencies {
+  testImplementation 'org.junit.jupiter:junit-jupiter:5.11.0'
+  testImplementation 'org.junit.platform:junit-platform-launcher:1.10.3'
+}
 
-  repositories {
-    mavenCentral()
-  }
+repositories {
+  mavenCentral()
+}
 
-  java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+java {
+  sourceCompatibility = JavaVersion.VERSION_1_8
+  targetCompatibility = JavaVersion.VERSION_1_8
 
-    withJavadocJar()
-    withSourcesJar()
-  }
+  withJavadocJar()
+  withSourcesJar()
+}
 
-  dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.0'
-    testImplementation 'org.junit.platform:junit-platform-launcher:1.10.3'
-  }
+test {
+  useJUnitPlatform()
+}
 
-  test {
-    useJUnitPlatform()
+jar {
+  manifest {
+    attributes('Automatic-Module-Name': 'io.github.adr.embedded')
   }
 }
 
-// Needs to be in the root build.gradle
-// See https://github.com/gradle-nexus/publish-plugin/issues/81 for details
+publishing {
+  publications {
+    mavenJava(MavenPublication) {
+      artifactId = 'e-adr'
+      from components.java
+      pom {
+        name ='Embedded Architectural Decision Records'
+        description = 'Architectural Decision Records embedded in Java code'
+        url = 'https://github.com/adr/e-adr/'
+
+        licenses {
+          license {
+            name = 'Eclipse Public License - v 2.0'
+            url = 'https://www.eclipse.org/org/documents/epl-2.0/'
+          }
+        }
+        developers {
+          developer {
+            id = 'koppor'
+            name = 'Oliver Kopp'
+            email = 'kopp.dev@gmail.com'
+          }
+        }
+        scm {
+          url = 'https://github.com/adr/e-adr'
+          connection = 'scm:git:https://github.com/adr/e-adr.git'
+          developerConnection = 'scm:git:github.com:adr/e-adr.git'
+        }
+      }
+    }
+  }
+}
+
+signing {
+  required = isReleaseVersion
+  useInMemoryPgpKeys(System.getenv("SIGNING_KEY"), System.getenv("SIGNING_PASSWORD"))
+  sign publishing.publications.mavenJava
+}
+
 nexusPublishing {
   repositories {
     // e-adr was registered before 2021
