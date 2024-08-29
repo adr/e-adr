@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+- Move `@ADR` annotation to `io.github.adr.linked` package to strengthen that it is a link.
 - Change to `RetentionPolicy.SOURCE`
 
 ### Fixed
