@@ -21,7 +21,7 @@ import io.github.adr.linked.ADR;
     ElementType.TYPE_PARAMETER,
     ElementType.TYPE_USE})
 @ADR(2)
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface ArchitecturallySignificant {
 
