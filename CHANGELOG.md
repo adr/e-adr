@@ -20,6 +20,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix typo in `ArchitecturallySignificant` and `ArchitecturalStyle`
 
+### Removed
+
+- Removed all container annotations (`@ADRs`. `@Alternatives`. `@MADRs`. `@YStatementJustifications`)
+
 ## [1.0.0] – 2017-09-10
 
 First release of embedded ADRs.
