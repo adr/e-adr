@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        # In case of an update, also update the required checks in GitHub's branch protection rules.
         java: [ '8', '11', '17', '21', '22' ]
     name: Java ${{ matrix.Java }}
     steps:
