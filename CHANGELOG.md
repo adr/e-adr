@@ -13,7 +13,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-- Updated to Java 21
 - Change to `RetentionPolicy.SOURCE`
 
 ### Fixed
