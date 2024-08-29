@@ -23,7 +23,7 @@ import java.lang.annotation.Target;
 @Documented
 public @interface ArchitecturallySignificant {
 
-    public enum QualityAttribute {
+    enum QualityAttribute {
         ACCURACY,
         PERFORMANCE,
         MODIFYABILITY,
@@ -33,14 +33,14 @@ public @interface ArchitecturallySignificant {
         MISC // use ISO 9126 or SEI taxonomy
     }
 
-    public enum ArchitecuralPrinciple {
+    enum ArchitecuralPrinciple {
         LOOSE_COUPLING,
         SEPARATION_OF_CONCERNS,
         TBC,
         NONE // use Eoin Woods keynote from WICSA 2008 as input?
     }
 
-    public enum ArchitecturalStyle {
+    enum ArchitecturalStyle {
         SOA,
         MESSAGING,
         CLIENT_SERVER,

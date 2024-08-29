@@ -40,7 +40,7 @@ public @interface MADR {
     String title();
 
     /**
-     * The user story belonging to this ADR. Typically a reference to the ticket in the issue tracker.
+     * The user story belonging to this ADR. Typically, a reference to the ticket in the issue tracker.
      *
      * @return User story as reference.
      */
@@ -54,7 +54,7 @@ public @interface MADR {
     /**
      * Considered alternatives. May be omitted if {@link Alternative} annotations are used.
      *
-     * @return Considred alternatives
+     * @return Considered alternatives
      */
     String[] alternatives() default {};
 
@@ -66,7 +66,7 @@ public @interface MADR {
     String chosenAlternative();
 
     /**
-     * @return Justification. e.g., only alternative, which meets k.o. criterion decision driver | which resolves force force | ... | comes out best (see below)
+     * @return Justification. e.g., only alternative, which meets k.o. criterion decision driver | which resolves force | ... | comes out best (see below)
      */
     String justification();
 

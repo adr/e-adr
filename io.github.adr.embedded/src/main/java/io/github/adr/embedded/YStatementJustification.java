@@ -31,7 +31,6 @@ import java.lang.annotation.Target;
 @Documented
 @Repeatable(YStatementJustifications.class)
 public @interface YStatementJustification {
-
     String id() default "AD-xx";
 
     String context() default "In the context of [functional requirement and current design stage/evolution state]";

@@ -23,6 +23,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.SOURCE)
 @Documented
 public @interface MADRs {
-
     MADR[] value();
 }
