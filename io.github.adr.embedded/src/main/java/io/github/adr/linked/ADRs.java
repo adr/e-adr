@@ -1,4 +1,4 @@
-package io.github.adr.embedded;
+package io.github.adr.linked;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

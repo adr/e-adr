@@ -13,7 +13,7 @@ package io.github.adr.embedded.demo;
 
 import java.util.UUID;
 
-import io.github.adr.embedded.ADR;
+import io.github.adr.linked.ADR;
 
 /**
  * Annotations can, by design, not put everywhere.
