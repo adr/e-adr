@@ -90,8 +90,6 @@ jobs:
           file ${{ steps.secring.outputs.filePath }}
           md5sum ${{ steps.secring.outputs.filePath }}
       - name: publishAllPublicationsToMavenCentralRepository
-        # Different version at maven centrl: 6.0-SNAPSHOT - and not 6.0.23234-SNAPSHOT
-        # We need to manually trigger a full maven central release - to avoid 6.0-alpha3 being published as 6.0 on maven central.
         run: |
           if [[ "${{ github.event.inputs.tagbuild }}" == "true" ]]; then
             tagbuild="true"
