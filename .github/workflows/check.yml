@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         # In case of an update, also update the required checks in GitHub's branch protection rules.
-        java: [ '8', '11', '17', '21', '22' ]
+        java: [ '17', '21', '24' ]
     name: Java ${{ matrix.Java }}
     steps:
       - uses: actions/checkout@v5
