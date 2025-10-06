@@ -99,4 +99,4 @@ jobs:
           else
             tagbuild="false"
           fi
-          ./gradlew -i -Ptagbuild="$tagbuild" publishAllPublicationsToMavenCentralRepository
+          ./gradlew --debug -Ptagbuild="$tagbuild" publishAllPublicationsToMavenCentralRepository
