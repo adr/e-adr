@@ -1,10 +1,6 @@
 import com.vanniktech.maven.publish.JavaLibrary
 import com.vanniktech.maven.publish.JavadocJar
 import com.vanniktech.maven.publish.SonatypeHost
-import dev.jbang.gradle.tasks.JBangTask
-import org.gradle.api.tasks.testing.logging.TestExceptionFormat
-import java.net.URI
-import java.util.*
 
 plugins {
     id("java-library")
@@ -16,7 +12,7 @@ repositories {
     mavenCentral()
 }
 
-group = 'io.github.adr'
+group = "io.github.adr"
 
 var version: String = project.findProperty("projVersion")?.toString() ?: "2.0.0"
 if (project.findProperty("tagbuild")?.toString() != "true") {
@@ -26,7 +22,7 @@ if (project.findProperty("tagbuild")?.toString() != "true") {
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
-        vendor = JvmVendorSpec.Temurin
+        vendor = JvmVendorSpec.ADOPTIUM
     }
 }
 
@@ -39,7 +35,7 @@ dependencies {
     testImplementation("org.junit.platform:junit-platform-launcher:1.13.4")
 }
 
-test {
+tasks.test {
   useJUnitPlatform()
 }
 
