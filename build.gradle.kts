@@ -39,7 +39,11 @@ tasks.test {
 }
 
 mavenPublishing {
- coordinates("io.github.adr", "e-adr", version)
+  coordinates("io.github.adr", "e-adr", version)
+
+  publishToMavenCentral()
+
+  signAllPublications()
 
   pom {
     name.set("e-adr")
