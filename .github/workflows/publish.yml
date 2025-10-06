@@ -6,9 +6,10 @@ on:
       - '**'
     branches:
       - 'main'
-    pull_request:
-      branches:
-        - 'main'
+
+  pull_request:
+    branches:
+      - 'main'
 
   workflow_dispatch:
     inputs:
@@ -45,7 +46,7 @@ jobs:
             .github/workflows/publish.yml
 
   publish:
-    name: jablib
+    name: e-adr-publish
     needs: detect_changes
     if: >
       github.event_name == 'schedule' ||
@@ -57,11 +58,13 @@ jobs:
       )
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v5
       - name: Setup JDK
         uses: actions/setup-java@v5
         with:
           java-version: '24'
           check-latest: true
+          distribution: 'temurin'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
       - id: istagbuild
@@ -96,4 +99,4 @@ jobs:
           else
             tagbuild="false"
           fi
-          ./gradlew -Ptagbuild="$tagbuild" :jablib:publishAllPublicationsToMavenCentralRepository
+          ./gradlew --debug -Ptagbuild="$tagbuild" publishAllPublicationsToMavenCentralRepository
