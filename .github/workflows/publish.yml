@@ -1,7 +1,6 @@
 name: Publish to maven central
 
 on:
-  # On releases
   push:
     tags:
       - '**'
