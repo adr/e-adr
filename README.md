@@ -78,11 +78,6 @@ Maven:
 </dependency>
 ```
 
-## Development information
-
-To upload to maven central, the gradle task `publsihToSonatype` at `io.github.adr.embedded` is used.
-Thereby the [Gradle Nexus Publish Plugin](https://github.com/gradle-nexus/publish-plugin/) plugin is used.
-
 ## Related work
 
 - [Documenting Implementation Decisions with Code Annotations](https://www.researchgate.net/publication/280014035_Documenting_Implementation_Decisions_with_Code_Annotations)
