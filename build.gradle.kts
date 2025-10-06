@@ -1,6 +1,5 @@
 import com.vanniktech.maven.publish.JavaLibrary
 import com.vanniktech.maven.publish.JavadocJar
-import com.vanniktech.maven.publish.SonatypeHost
 
 plugins {
     id("java-library")
@@ -40,21 +39,7 @@ tasks.test {
 }
 
 mavenPublishing {
-  configure(JavaLibrary(
-    // configures the -javadoc artifact, possible values:
-    // - `JavadocJar.None()` don't publish this artifact
-    // - `JavadocJar.Empty()` publish an emprt jar
-    // - `JavadocJar.Javadoc()` to publish standard javadocs
-    javadocJar = JavadocJar.Javadoc(),
-    // whether to publish a sources jar
-    sourcesJar = true,
-  ))
-
-  publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
-
-  signAllPublications()
-
-  coordinates("io.github.adr", "e-adr", version)
+ coordinates("io.github.adr", "e-adr", version)
 
   pom {
     name.set("e-adr")
@@ -81,6 +66,7 @@ mavenPublishing {
   }
 }
 
+/*
 // Include the BOM in the generated POM ("inline" / "inlining")
 // Source: https://github.com/gradle/gradle/issues/10861#issuecomment-3027387345
 publishing.publications.withType<MavenPublication>().configureEach {
@@ -88,3 +74,4 @@ publishing.publications.withType<MavenPublication>().configureEach {
         allVariants { fromResolutionResult() }
     }
 }
+*/
