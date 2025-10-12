@@ -6,13 +6,13 @@ Which retention policy to use for `@ADR` annotations?
 
 ## Considered Options
 
-- [RetentionPolicy.RUNTIME](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME)
-- [RetentionPolicy.CLASS](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#CLASS)
-- [RetentionPolicy.SOURCE](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE)
+- [`RetentionPolicy.RUNTIME`](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME)
+- [`RetentionPolicy.CLASS`](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#CLASS)
+- [`RetentionPolicy.SOURCE`](https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE)
 
 ## Decision Outcome
 
-Chosen option: "RetentionPolicy.RUNTIME", because we want to enable reflection on classes.
+Chosen option: "`RetentionPolicy.RUNTIME`", because we want to enable reflection on classes.
 We accept that the bytecode is larger.
 
 ## More Information
