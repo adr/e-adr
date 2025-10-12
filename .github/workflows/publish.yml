@@ -69,11 +69,29 @@ jobs:
         uses: gradle/actions/setup-gradle@v5
       - id: istagbuild
         run: |
-          if [[ "${GITHUB_REF}" == refs/tags/* ]]; then
-            echo "tagbuild=true" >> "$GITHUB_OUTPUT"
+          set -euo pipefail
+
+          if [[ "${GITHUB_REF_TYPE:-}" == "tag" ]]; then
+            is_tag=true
+            echo "🔖 Tag build detected: ${GITHUB_REF#refs/tags/}"
           else
-            echo "tagbuild=false" >> "$GITHUB_OUTPUT"
+            is_tag=false
+            echo "🏷️ Not a tag build (ref: ${GITHUB_REF})"
           fi
+
+          echo "tagbuild=${is_tag}" >> "$GITHUB_OUTPUT"
+
+          {
+            echo "## Build context"
+            echo ""
+            echo "| Key | Value |"
+            echo "|---|---|"
+            echo "| Tag build | ${is_tag} |"
+            echo "| Ref | \`${GITHUB_REF}\` |"
+            echo "| Ref type | \`${GITHUB_REF_TYPE:-n/a}\` |"
+            echo "| SHA | \`${GITHUB_SHA}\` |"
+            echo "| Actor | \`${GITHUB_ACTOR}\` |"
+          } >> "$GITHUB_STEP_SUMMARY"
       - name: Decode secretKeyRingFile
         id: secring
         uses: timheuer/base64-to-file@v1
