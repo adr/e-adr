@@ -1,7 +1,7 @@
 # Embedded Architectural Decision Records
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr)
-[![Javadocs](https://javadoc.io/badge/io.github.adr/e-adr.svg)](https://javadoc.io/doc/io.github.adr/e-adr)
+[![JavaDoc](https://javadoc.io/badge/io.github.adr/e-adr.svg)](https://javadoc.io/doc/io.github.adr/e-adr)
 [![License](https://img.shields.io/badge/license-EPL-blue.svg)](LICENSE)
 
 > Architectural knowledge captured in architectural designs and [architectural decisions](https://en.wikipedia.org/wiki/Architectural_decision) is primarily created and consumed in tools made for software architects.
@@ -54,8 +54,8 @@ public class MADRAnnotationDemoClass {
 ```
 
 By using `@ADR(1)`, the annotation points to `ADR 0001`.
-The convetion is that the decisions are stored in `docs/adr/` with a running number.
-They can be of an arbirary format, such as MADR or [Michael Nygard's format](http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions), which is supported by [adr-tools](https://github.com/npryce/adr-tools).
+The convention is that the decisions are stored in `docs/adr/` with a running number.
+They can be of an arbitrary format, such as MADR or [Michael Nygard's format](http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions), which is supported by [adr-tools](https://github.com/npryce/adr-tools).
 Example MADRs can be seen at the [ADR log of the adr-log tool](https://github.com/adr/adr-log/blob/master/docs/adr/index.md).
 
 ## Use in your projects
