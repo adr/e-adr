@@ -4,7 +4,7 @@ import com.vanniktech.maven.publish.JavadocJar
 plugins {
     id("java-library")
     id("java")
-    id("com.vanniktech.maven.publish") version "0.34.0"
+    id("com.vanniktech.maven.publish") version "0.35.0"
 }
 
 repositories {
