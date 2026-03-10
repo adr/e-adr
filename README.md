@@ -1,6 +1,6 @@
 # Embedded Architectural Decision Records
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr)
+[![Maven Central](https://maven-badges.sml.io/maven-central/io.github.adr/e-adr/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.adr/e-adr)
 [![JavaDoc](https://javadoc.io/badge/io.github.adr/e-adr.svg)](https://javadoc.io/doc/io.github.adr/e-adr)
 [![License](https://img.shields.io/badge/license-EPL-blue.svg)](LICENSE)
 
