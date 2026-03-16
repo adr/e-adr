@@ -74,6 +74,9 @@ jobs:
           if [[ "${GITHUB_REF_TYPE:-}" == "tag" ]]; then
             is_tag=true
             echo "🔖 Tag build detected: ${GITHUB_REF#refs/tags/}"
+          elif [[ "${{ github.event.inputs.tagbuild }}" == "true" ]]; then
+            is_tag=true
+            echo "🔖 Tag build detected: triggered by workflow"
           else
             is_tag=false
             echo "🏷️ Not a tag build (ref: ${GITHUB_REF})"
@@ -112,9 +115,4 @@ jobs:
           md5sum ${{ steps.secring.outputs.filePath }}
       - name: publishAndReleaseToMavenCentral
         run: |
-          if [[ "${{ github.event.inputs.tagbuild }}" == "true" ]]; then
-            tagbuild="true"
-          else
-            tagbuild="false"
-          fi
-          ./gradlew -Ptagbuild="$tagbuild" publishAndReleaseToMavenCentral
+          ./gradlew -Ptagbuild="${{ steps.istagbuild.outputs.tagbuild }}" publishAndReleaseToMavenCentral
