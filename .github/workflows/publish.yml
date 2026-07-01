@@ -49,13 +49,14 @@ jobs:
     name: e-adr-publish
     needs: detect_changes
     if: >
-      github.event_name == 'schedule' ||
-      github.event_name == 'workflow_dispatch' ||
-      (needs.detect_changes.outputs.changed == 'true' &&
-        ((github.event_name == 'workflow_call' && github.repository == 'adr/e-adr') ||
-         (github.event_name == 'push' && github.repository == 'adr/e-adr') ||
-         (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == 'adr/e-adr'))
-      )
+      github.actor != 'dependabot[bot]' &&
+      (github.event_name == 'schedule' ||
+       github.event_name == 'workflow_dispatch' ||
+       (needs.detect_changes.outputs.changed == 'true' &&
+         ((github.event_name == 'workflow_call' && github.repository == 'adr/e-adr') ||
+          (github.event_name == 'push' && github.repository == 'adr/e-adr') ||
+          (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == 'adr/e-adr'))
+       ))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
