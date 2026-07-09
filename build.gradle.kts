@@ -13,7 +13,7 @@ repositories {
 
 group = "io.github.adr"
 
-var version: String = project.findProperty("projVersion")?.toString() ?: "2.0.0"
+var version: String = project.findProperty("projVersion")?.toString() ?: "2.0.1"
 if (project.findProperty("tagbuild")?.toString() != "true") {
     version += "-SNAPSHOT"
 }
