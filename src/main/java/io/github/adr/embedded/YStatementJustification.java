@@ -43,7 +43,7 @@ public @interface YStatementJustification {
 
     String neglected() default "and neglected [alternate solution options]";
 
-    String achieving() default "to achieve [positive consequences of chosen solution (quality attribute fulfillmment?)]";
+    String achieving() default "to achieve [positive consequences of chosen solution (quality attribute fulfillment?)]";
 
     String accepting() default "accepting that [negative consequences of chosen solution (quality attribute impact?)]";
 
