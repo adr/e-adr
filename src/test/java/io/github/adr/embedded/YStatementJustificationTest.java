@@ -25,7 +25,7 @@ public class YStatementJustificationTest {
         assertEquals("facing [non-functional requirements such as quality attributes and constraints]", akmadAnnotation.facing());
         assertEquals("we decided to implement business logic in POJOs", akmadAnnotation.chosen());
         assertEquals("other options such as JEE EJBs and Spring components", akmadAnnotation.neglected());
-        assertEquals("to achieve [positive consequences of chosen solution (quality attribute fulfillmment?)]", akmadAnnotation.achieving());
+        assertEquals("to achieve [positive consequences of chosen solution (quality attribute fulfillment?)]", akmadAnnotation.achieving());
         assertEquals("accepting that [negative consequences of chosen solution (quality attribute impact?)]", akmadAnnotation.accepting());
     }
 }
